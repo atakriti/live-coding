@@ -1,0 +1,50 @@
+.toggle{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.toggle-container{
+    position: relative;
+    width: 4rem ;
+    height: 2rem;
+    margin-left: 20px;
+}
+.toggle-container input{
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.button{
+    position: absolute;
+    background-color: gray;
+    border-radius:20px ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  
+}
+.button::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius:50% ;
+    background-color: white;
+    top: 8px;  
+}
+.toggle-container input:checked + span{
+    background-color: tomato;
+}
+.toggle-container input:checked + span::before{
+    transform: translateX(2.5rem);
+}
