@@ -43,10 +43,12 @@
   flex-direction: column;
   flex-flow: wrap;
   background-color: var(--company-them-bg-color);
+  
 }
 .about .bg {
   margin-bottom: 2vh;
   width: 40%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,18 +56,48 @@
   background-color: white;
   border-radius: 2%;
   border: 2px rgba(0, 0, 0, 0.529) solid;
+ 
 }
 .card {
   width: 90%;
   height: 100%;
   border-radius: 2%;
+  
 }
 .eat {
   background-color: bisque;
 }
 .sleep {
+  background-color: rgb(175, 136, 122);
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+.sleep h4{
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .dream {
+  background-color: rgb(255, 158, 158);
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+
+}
+.dream h4{
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .repeat {
+  background-color: rgb(174, 255, 143);
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+.repeat h4{
+  font-size: 20px;
+  margin-bottom: 20px;
 }
