@@ -1,50 +1,34 @@
-.toggle{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main div{
+background-color: burlywood;
+color: black;
+
+text-align: center;
+padding:30px;
+border-radius: 10px;
+}
+.main{
+    display: grid;
+    border: 2px red solid;
+    width: 80%;
+    margin: 50px auto;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    gap: 10px 4px;
+}
+.main div:nth-child(1){
     display: flex;
+    justify-content: center;
     align-items: center;
-  justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    
 }
 
-
-
-
-
-.toggle-container{
-    position: relative;
-    width: 4rem ;
-    height: 2rem;
-    margin-left: 20px;
-}
-.toggle-container input{
-    opacity: 0;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-}
-.button{
-    position: absolute;
-    background-color: gray;
-    border-radius:20px ;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-  
-}
-.button::before{
-    position: absolute;
-    content: "";
-    width: 15px;
-    height: 15px;
-    border-radius:50% ;
-    background-color: white;
-    top: 8px;  
-}
-.toggle-container input:checked + span{
-    background-color: tomato;
-}
-.toggle-container input:checked + span::before{
-    transform: translateX(2.5rem);
+.main div:nth-child(4){
+    grid-column: 3/4;
 }
