@@ -9,11 +9,12 @@
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 7vh repeat(4, 50vh);
+  grid-template-rows: 7vh repeat(4, 50vh) 1fr;
   grid-template-areas:
     "menu"
     "main"
     "slider"
+    "card"
     "card"
     "footer";
 }

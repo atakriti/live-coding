@@ -17,3 +17,47 @@
 .card {
   grid-area: card;
 }
+.main-landing-part div:nth-child(2){
+  font-size: 0.9rem;
+  width: 90%;
+ padding-left: 5%;
+  padding-top: 5%;
+  line-height: 3vh;
+}
+.main-landing-part div:nth-child(2) h3{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin-top: 10%;
+}
+/* vorteile */
+.vorteile{
+  width: 100%;
+  padding-top: 10%;
+  padding-left: 5%;
+  line-height: 3vh;
+}
+.vorteile>p>span{
+font-size: 0.7rem;
+}
+/* super-preise */
+.super-preise{
+  padding-left: 5%;
+}
+.super-preise h2{
+  font-size:1.5rem;
+  padding: 5% 0%;
+}
+.super-preise ul{
+  padding-left: 6%;
+  line-height: 2.5vh;
+  padding-bottom: 5%;
+}
+/* kondi-list */
+
+.kondi-list{
+  line-height: 4vh;
+  padding-left: 5%;
+}
