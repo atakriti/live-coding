@@ -2,4 +2,12 @@
 footer {
   grid-area: footer;
   display: flex;
+  flex-direction: column;
+}
+footer:first-child {
+display: flex;
+flex-direction: column;
+}
+footer:first-child a{
+  text-decoration: none;
 }

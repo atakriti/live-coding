@@ -61,3 +61,13 @@ font-size: 0.7rem;
   line-height: 4vh;
   padding-left: 5%;
 }
+.kondi-list button{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1vh 23vw;
+  margin-top: 10%;
+  font-weight: bold;
+  
+}
