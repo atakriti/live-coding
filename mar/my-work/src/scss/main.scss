@@ -1,0 +1,83 @@
+// @import "./mixins";
+// body{
+//   width: 100%;
+//   display: grid;
+//   position: relative;
+//   main{
+//     .menu{
+//       a{
+//         //  @include ma-font("h");
+//          font-size: font("t");
+//       }
+     
+//     }
+//   }
+//   .bg{
+//     background-image: url(../koldalen-4-1384902.jpg);
+//     height: 40vw;
+
+    
+//   }
+// }
+
+  // ==============================
+  body{
+    background-color: lightblue;
+    height: 100vh;
+    .bubbles{
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+      .item{        
+        border: 1px rgb(255, 255, 255) solid;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        box-shadow: inset 5px 10px 10px rgb(255, 255, 255);
+
+        &::after{
+          content: "";
+          background-color: white;
+          width: 0.5rem;
+          height: 1rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 1rem;
+          left: 0.8rem;
+          transform: rotate(30deg);
+          opacity: 0.5;
+        }
+        
+      }
+    }
+  }
+  @mixin bubble ($duration) {
+    animation-name: bubbles;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  
+  animation-timing-function: linear;
+  }
+  @keyframes bubbles {
+    from{
+      transform: translateY(0vh);
+      opacity: 1;
+      
+    }
+    to{
+      opacity: 0;
+     
+
+      transform: translateY(-90vh);
+    }
+  }
+
+  @for $i from 1 through 30 {
+    .item:nth-child(#{$i}) {
+      height: random(40) + vh;
+      @include bubble (random($i) + 3s)
+    }
+  }

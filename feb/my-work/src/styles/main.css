@@ -1,0 +1,36 @@
+.contact {
+  border: 2px red solid;
+  width: 30%;
+  overflow: hidden;
+  min-width: 50%;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 80vh;
+}
+.contact form .contact-inputs {
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 40vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact {
+    min-width: 100%;
+  }
+  .contact form {
+    min-height: 60vh;
+  }
+  .contact form .contact-inputs {
+    min-height: 20vh;
+  }
+  .contact form .contact-inputs input {
+    margin-bottom: 2%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

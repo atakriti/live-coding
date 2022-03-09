@@ -1,0 +1,283 @@
+body {
+  background-color: lightblue;
+  height: 100vh;
+}
+body .bubbles {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+body .bubbles .item {
+  border: 1px white solid;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  box-shadow: inset 5px 10px 10px white;
+}
+body .bubbles .item::after {
+  content: "";
+  background-color: white;
+  width: 0.5rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  transform: rotate(30deg);
+  opacity: 0.5;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-90vh);
+  }
+}
+.item:nth-child(1) {
+  height: 16vh;
+  animation-name: bubbles;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(2) {
+  height: 7vh;
+  animation-name: bubbles;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(3) {
+  height: 32vh;
+  animation-name: bubbles;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(4) {
+  height: 23vh;
+  animation-name: bubbles;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(5) {
+  height: 37vh;
+  animation-name: bubbles;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(6) {
+  height: 16vh;
+  animation-name: bubbles;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(7) {
+  height: 10vh;
+  animation-name: bubbles;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(8) {
+  height: 21vh;
+  animation-name: bubbles;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(9) {
+  height: 6vh;
+  animation-name: bubbles;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(10) {
+  height: 31vh;
+  animation-name: bubbles;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(11) {
+  height: 7vh;
+  animation-name: bubbles;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(12) {
+  height: 2vh;
+  animation-name: bubbles;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(13) {
+  height: 4vh;
+  animation-name: bubbles;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(14) {
+  height: 3vh;
+  animation-name: bubbles;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(15) {
+  height: 2vh;
+  animation-name: bubbles;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(16) {
+  height: 23vh;
+  animation-name: bubbles;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(17) {
+  height: 18vh;
+  animation-name: bubbles;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(18) {
+  height: 38vh;
+  animation-name: bubbles;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(19) {
+  height: 33vh;
+  animation-name: bubbles;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(20) {
+  height: 23vh;
+  animation-name: bubbles;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(21) {
+  height: 6vh;
+  animation-name: bubbles;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(22) {
+  height: 37vh;
+  animation-name: bubbles;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(23) {
+  height: 18vh;
+  animation-name: bubbles;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(24) {
+  height: 11vh;
+  animation-name: bubbles;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(25) {
+  height: 25vh;
+  animation-name: bubbles;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(26) {
+  height: 5vh;
+  animation-name: bubbles;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(27) {
+  height: 27vh;
+  animation-name: bubbles;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(28) {
+  height: 28vh;
+  animation-name: bubbles;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(29) {
+  height: 35vh;
+  animation-name: bubbles;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.item:nth-child(30) {
+  height: 34vh;
+  animation-name: bubbles;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*# sourceMappingURL=main.css.map */
