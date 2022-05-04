@@ -5,13 +5,21 @@
  * E.g. in an array fruits = ['bananas', 'oranges', 'kiwis']
  * addItem('apples', fruits) the result should be ['bananas', 'oranges', 'kiwis', 'apples']
  */
-
+let fruits = ['bananas', 'oranges', 'kiwis']
+let fruitsFunc = function (param,...pushing) {
+    let fruitsCopy = [...param]
+    fruitsCopy.push(...pushing)
+    return fruitsCopy
+}
+console.log(fruitsFunc(fruits,"apple","banana"))
+console.log(fruits)
+console.log("\nTask2")
 /**
  * 02
  * Your app is accepting an object as the one named "recipe" just after the exercise description.
  * This object contains details for a cooking recipe.
  * 
- * a) Create a function that accepts such an object and returns an array of the ingredients that object contains  
+ * a) Create a function that accepts such an object and returns an array of the ingredients that object contains 
  * b) Create another similar function that returns an array of the quantities of each ingredient
  * c) Create a function that accepts an array of ingredients and an array of quantities and prints a list in the form of:
  * ingredient - quantity
@@ -74,7 +82,48 @@ const recipe = {
       "strCreativeCommonsConfirmed": null,
       "dateModified": null
 }
+let accept = function (object) {
+    let array = [];
+    let entiresO = Object.entries(object)
+    for (let i = 0; i < entiresO.length; i++){
+        let keys = entiresO[i][0]
+        let value = entiresO[i][1]
+        if (keys.includes("strIngredient") && value) {
+            array.push(value)
+        }
+    }
+    return array
+}
+let ingredient = accept(recipe)
+console.log(accept(recipe))
+// b
+console.log("\nB")
+let acceptB = function (object) {
+    let array = [];
+    let entiresO = Object.entries(object)
+    for (let i = 0; i < entiresO.length; i++){
+        let keys = entiresO[i][0]
+        let value = entiresO[i][1]
+        if (keys.includes("strMeasure") && value) {
+            array.push(value)
+        }
+    }
+    return array
+}
+let quantity = acceptB(recipe)
+console.log(acceptB(recipe))
 
+// c
+console.log("\nC")
+let assign = function (ingredient,quantity) {
+    let array = [];
+    for (let i = 0; i < ingredient.length; i++){
+        array.push(ingredient[i]);
+        array.push(quantity[i])
+    }
+    return array
+}
+console.log(assign(ingredient,quantity))
 /**
  * 03
  * Create a function that adds any number of objects to another existing object

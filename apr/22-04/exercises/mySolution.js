@@ -67,7 +67,7 @@ console.log(`${favMovie.title} is ${favMovie.duration} Hours.The stars are : ${f
  */
 let eShop = [
     {
-        name: "shirt",
+        name: "T-Shirt",
         price: 10
     },
     {
@@ -79,11 +79,11 @@ let eShop = [
         price: 20
     },
     {
-        name: "hat",
+        name: "Jacket",
         price: 8
     },
     {
-        name: "skirt",
+        name: "watch",
         price: 15
     }
 
@@ -116,73 +116,93 @@ let cards = [
     }
 ];
 // a
-let given = (pro) => {
-    cards.push(pro)
-}
-given({
-    user: "new user",
-    product: "Headset",
-    quantity:2
-})
-console.log(cards);
-// b
-let givenUser = (pro) => {
-    for (let i = 0; i < cards.length; i++){
-        if (cards[i].user === pro) {
-            console.log(`The products that ${pro} has:`,cards[i].product)
-        }
-    }
-}
-givenUser("anwar");
-// c
-let totalUser = (user) => {
-    let totalOfUser = 0;
-    for (let i = 0; i < cards.length; i++){
-        if (cards[i].user === user) {
-            totalOfUser += cards[i].quantity
-        }
-    }
-    console.log(`The total of Quantity of ${user} ${totalOfUser}`)
-}
-totalUser("anwar")
-// d
-let change = (user,change) => {
-    for (let i = 0; i < cards.length; i++){
-        if (cards[i].user === user) {
-            cards[i].quantity = change
-        }
-    }
+// let given = (pro) => {
+//     cards.push(pro)
+// }
+// given({
+//     user: "new user",
+//     product: "Headset",
+//     quantity:2
+// })
+// console.log(cards);
+// // b
+// let givenUser = (pro) => {
+//     for (let i = 0; i < cards.length; i++){
+//         if (cards[i].user === pro) {
+//             console.log(`The products that ${pro} has:`,cards[i].product)
+//         }
+//     }
+// }
+// givenUser("anwar");
+// // c
+// let totalUser = (user) => {
+//     let totalOfUser = 0;
+//     for (let i = 0; i < cards.length; i++){
+//         if (cards[i].user === user) {
+//             totalOfUser += cards[i].quantity
+//         }
+//     }
+//     console.log(`The total of Quantity of ${user} ${totalOfUser}`)
+// }
+// totalUser("anwar")
+// // d
+// let change = (user,change) => {
+//     for (let i = 0; i < cards.length; i++){
+//         if (cards[i].user === user) {
+//             cards[i].quantity = change
+//         }
+//     }
     
     
-}
-change("anwar", 2)
-console.log(cards)
-// changing the total amount after changing 
-let totalUser1 = (user) => {
-    let totalOfUser = 0;
-    for (let i = 0; i < cards.length; i++){
-        if (cards[i].user === user) {
-            totalOfUser += cards[i].quantity
-        }
-    }
-    console.log(`The total of Quantity after changing of ${user} ${totalOfUser}`)
-}
-totalUser1("anwar")
+// }
+// change("anwar", 2)
+// console.log(cards)
+// // changing the total amount after changing 
+// let totalUser1 = (user) => {
+//     let totalOfUser = 0;
+//     for (let i = 0; i < cards.length; i++){
+//         if (cards[i].user === user) {
+//             totalOfUser += cards[i].quantity
+//         }
+//     }
+//     console.log(`The total of Quantity after changing of ${user} ${totalOfUser}`)
+// }
+// totalUser1("anwar")
 
-// e
-let del = () => {
-    return cards.splice(4,1)
-}
-del()
-console.log("after deleting a product",cards)
+// // e
+// let del = () => {
+//     return cards.splice(4,1)
+// }
+// del()
+// console.log("after deleting a product",cards)
 // f
-let find = (find) => {
-    let totalOfPrice = 10;
+
+// let find = (name) => {
+//     let result = 0;
+//     for (let i = 0; i < cards.length; i++){        
+//         if (cards[i].user === name) {
+//             for (let j = 0; j < eShop.length; j++){
+//                 if (eShop[j].name.toLowerCase() === cards[i].product.toLowerCase()) {
+//                    result += cards[i].quantity * eShop[j].price
+//                 }
+//             }
+//        }
+//     }
+//     return result
+// }
+// console.log("Total", find("omer"))
+
+let find = (name) => {
+    let result = 0;
     for (let i = 0; i < cards.length; i++){
-        if (cards[i].user === find) {
-            totalOfPrice *= cards[i].quantity
+        if (cards[i].user === name) {
+            for (let j = 0; j < eShop.length; j++){
+                if (cards[i].product.toLowerCase() === eShop[j].name.toLowerCase()) {
+                    result += cards[i].quantity * eShop[j].price
+                }
+            }
         }
     }
-    console.log(`for each item is 10€ so the Result of ${find} is ${totalOfPrice}€`)
+    return result
 }
-find("anwar")
+console.log("My Result",find("omer"))
