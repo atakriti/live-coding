@@ -17,8 +17,68 @@
  * Bonus: Make the functions as arbitrary as cats are - 
  * sometimes make it so the cat doesn't want to be petted.
  */
+class Cat {
+    constructor(name) {
+        this.tiredness = 50
+        this.hunger = 20
+        this.lonliness = 20
+        this.happieness = 20
+        this.name = name
+    }
+    feed(food) {
+        if (food.length > 0) {
+            this.happieness += 10
+            this.hunger -= 10
+        }
+        if (this.hunger <= 0 ) {
+              this.hunger = 0
+        }
 
+        if (this.hunger > 100) {
+            this.hunger = 100
+        }
+        if (this.happieness < 0) {
+            this.happieness = 0
+        }
+        if (this.happieness > 100) {
+            this.happieness = 100
+        }
+    }
+    sleep(sleeping) {
+        if (sleeping >= 3) {
+            this.tiredness -= 10
+            this.hunger += 10
+        }
+        if (this.tiredness < 0 ) {
+            this.tiredness = 0
+        }
+        if (this.tiredness > 100) {
+            this.tiredness = 100
+        }
+        if (this.hunger < 0) {
+            this.hunger = 0
+        }
+        if (this.hunger > 100) {
+            this.hunger = 100
+        }
 
+    }
+
+    toy(toys) {
+        if (toys.toLowerCase().includes("ball")) {
+            this.lonliness -= 10
+        }
+        
+    }
+
+}
+let cat1 = new Cat("Caty")
+cat1.feed("fish")
+cat1.feed("fish")
+cat1.feed("fish")
+cat1.feed("fish")
+cat1.toy("Ball")
+console.log(cat1)
 
 /**
  * The Reading List
