@@ -33,17 +33,19 @@ app.get("/products", (req, res) => {
   res.send(db.data.products);
 });
 
-// endpoint 3: expects a POST request to the path localhost:8080/signup with a body that contains the data of the new user, adds it to the database (db.json) and then sends a response "user added successfully" to the client.
-app.post("/signup", async (req, res) => {
+// endpoint 3: expects a POST request to the path localhost:8080/users/signup with a body that contains the data of the new user, adds it to the database (db.json) and then sends a response "user added successfully" to the client.
+app.post("/users/signup", async (req, res) => {
   //Create
   console.log(req.body);
 
   let newUser = req.body;
 
-  const checkEmail = db.data.users.some(item=> item.email === req.body.email );
+  const checkEmail = db.data.users.some(
+    (item) => item.email === req.body.email
+  );
 
-  if(checkEmail){
-   return res.send("user with this email already exists")
+  if (checkEmail) {
+    return res.send("user with this email already exists");
   }
   newUser.id = db.data.users.length + 1; // to create an id
   db.data.users.push(newUser); // to add the 'newUser' to the db
@@ -52,3 +54,4 @@ app.post("/signup", async (req, res) => {
 
   res.send("user added successfully");
 });
+
